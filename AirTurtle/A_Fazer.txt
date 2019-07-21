@@ -1,0 +1,14 @@
+﻿-persistencia do read; (simples)
+
+-povoar o sistema; (simples)
+
+-mostrar campos objeto em consultar/remover, por ex: a aeronave escolhida do voo;
+
+-Testar data do voo
+
+-Calculo de fileiras automático
+
+-Concatenar campos de endereço para mostrar no cliente e no destino;
+(começado)
+-testar a exceçao da disponibilidade da aeronave e do cpf errado*
+-fazer os id serem definidos automaticamente ao invez do usuario digitar OU criar exceçao de id repetido*

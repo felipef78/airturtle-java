@@ -1,0 +1,31 @@
+List<Component> componentes = new ArrayList<>();
+                    List<Field> atributos = new ArrayList<>();
+                    String prefixo = null;
+                    String modelo = null;
+                    int autonomia = 0;
+                    int numTotalFileiras = 0;
+                    int numAssentosPorFileiras = 0;
+                    int numFileirasExecutiva = 0;
+                    int numFileirasEconomica = 0;
+
+                    for (Component component : ultJPanel.getComponents()) {
+                        if (component.getClass() == new JTextField().getClass()) {
+                            componentes.add(component);
+                            if (component.getName().equals("autonomia")) {
+                                autonomia = Integer.parseInt(((JTextField) component).getText());
+                            } else if (component.getName().equals("prefixoIdentificador")) {
+                                prefixo = ((JTextField) component).getText();
+                            } else if (component.getName().equals("modelo")) {
+                                modelo = ((JTextField) component).getText();
+                            } else if (component.getName().equals("numTotalFileiras")) {
+                                numTotalFileiras = Integer.parseInt(((JTextField) component).getText());
+                            } else if (component.getName().equals("numAssentosPorFileiras")) {
+                                numAssentosPorFileiras = Integer.parseInt(((JTextField) component).getText());
+                            } else if (component.getName().equals("numFileirasExecutiva")) {
+                                numFileirasExecutiva = Integer.parseInt(((JTextField) component).getText());
+                            } else if (component.getName().equals("numFileirasEconomica")) {
+                                numFileirasEconomica = Integer.parseInt(((JTextField) component).getText());
+                            }
+                        }
+                    }
+                    cia.cadastrarAeronave(prefixo, modelo, autonomia, numTotalFileiras, numAssentosPorFileiras, numFileirasExecutiva, numFileirasEconomica);
